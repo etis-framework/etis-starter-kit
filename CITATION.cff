@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "ETIS Engineering Platform Starter Kit"
+message: "If you use this Starter Kit, please cite it using the metadata in this file."
+type: software
+authors:
+  - family-names: "O'Connell"
+    given-names: "William T."
+year: 2026
+abstract: "A repository-centered engineering platform starter kit for Engineering Trustworthy Intelligent Systems (ETIS), including engineering stages, templates, examples, governance controls, and evidence-centered workflows."
+keywords:
+  - trustworthy AI
+  - software engineering
+  - AI governance
+  - evidence-centered engineering
+  - repository-centered engineering
+  - intelligent systems
+license: MIT
+repository-code: "https://github.com/etis-framework/etis-starter-kit"
+url: "https://etisframework.org"

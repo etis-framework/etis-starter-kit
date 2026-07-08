@@ -1,0 +1,591 @@
+site_url: https://etisframework.org/
+site_name: ETIS Engineering Platform Starter Kit
+site_description: >
+  Engineering Trustworthy Intelligent Systems (ETIS) Engineering Platform Starter Kit.
+  Repository-centered engineering guidance, reusable templates, reference implementation,
+  governance, and project workspaces for building trustworthy intelligent systems.
+site_author: William T. O'Connell
+
+use_directory_urls: true
+
+repo_url: https://github.com/etis-framework/etis-starter-kit
+repo_name: ETIS Starter Kit
+
+docs_dir: docs
+site_dir: site
+
+not_in_nav: |
+  project-workspace/**
+  platform-design/**
+  engineering/_shared/**
+
+theme:
+  name: material
+  logo: assets/etis-logo.svg
+  favicon: assets/favicon.ico
+
+  icon:
+    repo: fontawesome/brands/github
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/etis-framework/etis-starter-kit
+      name: ETIS Starter Kit on GitHub
+    - icon: fontawesome/solid/globe
+      link: https://etisframework.org
+      name: ETIS Framework
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/etis-ui-components.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - social
+
+copyright: >
+  © 2026 William T. O'Connell • ETIS Framework
+
+nav:
+  - Home: index.md
+  - Platform Overview:
+    - Overview: platform/README.md
+    - What is the ETIS Engineering Platform?: platform/what_is_etis_engineering_platform.md
+    - How to Use the Starter Kit: platform/how_to_use_the_starter_kit.md
+    - Engineering Lifecycle at a Glance: platform/engineering_lifecycle_at_a_glance.md
+    - Repository Tour: platform/repository_tour.md
+    - Platform Quick Start: platform/quick_start.md
+  - Engineering Platform:
+      - Overview: engineering/README.md
+      - ES-100 — Start Here:
+          - Welcome: engineering/ES-100/README.md
+          - Navigation: engineering/ES-100/navigation.md
+          - First Day Guide: engineering/ES-100/first_day_guide.md
+          - Engineering Journey: engineering/ES-100/engineering_journey.md
+          - Engineering Principles: engineering/ES-100/engineering_principles.md
+          - Stage Map: engineering/ES-100/stage_map.md
+          - Glossary: engineering/ES-100/glossary.md
+          - Readiness Gate: engineering/ES-100/readiness_gate.md
+          - Stage Manifest: engineering/ES-100/stage_manifest.md
+      - ES-101 — Vision and Problem Definition:
+          - Welcome: engineering/ES-101/README.md
+          - Navigation: engineering/ES-101/navigation.md
+          - Engineering Context: engineering/ES-101/engineering_context.md
+          - Activities: engineering/ES-101/activities.md
+          - Evidence: engineering/ES-101/evidence.md
+          - Outputs: engineering/ES-101/outputs.md
+          - Readiness Gate: engineering/ES-101/readiness_gate.md
+          - Stage Manifest: engineering/ES-101/stage_manifest.md
+      - ES-102 — Requirements and Constraints:
+          - Welcome: engineering/ES-102/README.md
+          - Navigation: engineering/ES-102/navigation.md
+          - Engineering Context: engineering/ES-102/engineering_context.md
+          - Activities: engineering/ES-102/activities.md
+          - Evidence: engineering/ES-102/evidence.md
+          - Outputs: engineering/ES-102/outputs.md
+          - Readiness Gate: engineering/ES-102/readiness_gate.md
+          - Stage Manifest: engineering/ES-102/stage_manifest.md
+      - ES-103 — Planning and Work Breakdown:
+          - Welcome: engineering/ES-103/README.md
+          - Navigation: engineering/ES-103/navigation.md
+          - Engineering Context: engineering/ES-103/engineering_context.md
+          - Activities: engineering/ES-103/activities.md
+          - Evidence: engineering/ES-103/evidence.md
+          - Outputs: engineering/ES-103/outputs.md
+          - Readiness Gate: engineering/ES-103/readiness_gate.md
+          - Stage Manifest: engineering/ES-103/stage_manifest.md
+      - ES-104 — Architecture:
+          - Welcome: engineering/ES-104/README.md
+          - Navigation: engineering/ES-104/navigation.md
+          - Engineering Context: engineering/ES-104/engineering_context.md
+          - Activities: engineering/ES-104/activities.md
+          - Evidence: engineering/ES-104/evidence.md
+          - Outputs: engineering/ES-104/outputs.md
+          - Readiness Gate: engineering/ES-104/readiness_gate.md
+          - Stage Manifest: engineering/ES-104/stage_manifest.md
+      - ES-105 — Design and Technical Decisions:
+          - Welcome: engineering/ES-105/README.md
+          - Navigation: engineering/ES-105/navigation.md
+          - Engineering Context: engineering/ES-105/engineering_context.md
+          - Activities: engineering/ES-105/activities.md
+          - Evidence: engineering/ES-105/evidence.md
+          - Outputs: engineering/ES-105/outputs.md
+          - Readiness Gate: engineering/ES-105/readiness_gate.md
+          - Stage Manifest: engineering/ES-105/stage_manifest.md
+      - ES-106 — Implementation Readiness:
+          - Welcome: engineering/ES-106/README.md
+          - Navigation: engineering/ES-106/navigation.md
+          - Engineering Context: engineering/ES-106/engineering_context.md
+          - Activities: engineering/ES-106/activities.md
+          - Evidence: engineering/ES-106/evidence.md
+          - Outputs: engineering/ES-106/outputs.md
+          - Readiness Gate: engineering/ES-106/readiness_gate.md
+          - Stage Manifest: engineering/ES-106/stage_manifest.md
+      - ES-107 — AI-Assisted Implementation:
+          - Welcome: engineering/ES-107/README.md
+          - Navigation: engineering/ES-107/navigation.md
+          - Engineering Context: engineering/ES-107/engineering_context.md
+          - Activities: engineering/ES-107/activities.md
+          - Evidence: engineering/ES-107/evidence.md
+          - Outputs: engineering/ES-107/outputs.md
+          - Readiness Gate: engineering/ES-107/readiness_gate.md
+          - Stage Manifest: engineering/ES-107/stage_manifest.md
+      - ES-108 — Code Review and Integration:
+          - Welcome: engineering/ES-108/README.md
+          - Navigation: engineering/ES-108/navigation.md
+          - Engineering Context: engineering/ES-108/engineering_context.md
+          - Activities: engineering/ES-108/activities.md
+          - Evidence: engineering/ES-108/evidence.md
+          - Outputs: engineering/ES-108/outputs.md
+          - Readiness Gate: engineering/ES-108/readiness_gate.md
+          - Stage Manifest: engineering/ES-108/stage_manifest.md
+      - ES-109 — Testing and Verification:
+          - Welcome: engineering/ES-109/README.md
+          - Navigation: engineering/ES-109/navigation.md
+          - Engineering Context: engineering/ES-109/engineering_context.md
+          - Activities: engineering/ES-109/activities.md
+          - Evidence: engineering/ES-109/evidence.md
+          - Outputs: engineering/ES-109/outputs.md
+          - Readiness Gate: engineering/ES-109/readiness_gate.md
+          - Stage Manifest: engineering/ES-109/stage_manifest.md
+      - ES-110 — Release Readiness:
+          - Welcome: engineering/ES-110/README.md
+          - Navigation: engineering/ES-110/navigation.md
+          - Engineering Context: engineering/ES-110/engineering_context.md
+          - Activities: engineering/ES-110/activities.md
+          - Evidence: engineering/ES-110/evidence.md
+          - Outputs: engineering/ES-110/outputs.md
+          - Readiness Gate: engineering/ES-110/readiness_gate.md
+          - Stage Manifest: engineering/ES-110/stage_manifest.md
+      - ES-111 — Operational Readiness:
+          - Welcome: engineering/ES-111/README.md
+          - Navigation: engineering/ES-111/navigation.md
+          - Engineering Context: engineering/ES-111/engineering_context.md
+          - Activities: engineering/ES-111/activities.md
+          - Evidence: engineering/ES-111/evidence.md
+          - Outputs: engineering/ES-111/outputs.md
+          - Readiness Gate: engineering/ES-111/readiness_gate.md
+          - Stage Manifest: engineering/ES-111/stage_manifest.md
+      - ES-112 — Deployment and Transition:
+          - Welcome: engineering/ES-112/README.md
+          - Navigation: engineering/ES-112/navigation.md
+          - Engineering Context: engineering/ES-112/engineering_context.md
+          - Activities: engineering/ES-112/activities.md
+          - Evidence: engineering/ES-112/evidence.md
+          - Outputs: engineering/ES-112/outputs.md
+          - Readiness Gate: engineering/ES-112/readiness_gate.md
+          - Stage Manifest: engineering/ES-112/stage_manifest.md
+      - ES-113 — Operations and Monitoring:
+          - Welcome: engineering/ES-113/README.md
+          - Navigation: engineering/ES-113/navigation.md
+          - Engineering Context: engineering/ES-113/engineering_context.md
+          - Activities: engineering/ES-113/activities.md
+          - Evidence: engineering/ES-113/evidence.md
+          - Outputs: engineering/ES-113/outputs.md
+          - Readiness Gate: engineering/ES-113/readiness_gate.md
+          - Stage Manifest: engineering/ES-113/stage_manifest.md
+      - ES-114 — Post-Release Learning and Stewardship:
+          - Welcome: engineering/ES-114/README.md
+          - Navigation: engineering/ES-114/navigation.md
+          - Engineering Context: engineering/ES-114/engineering_context.md
+          - Activities: engineering/ES-114/activities.md
+          - Evidence: engineering/ES-114/evidence.md
+          - Outputs: engineering/ES-114/outputs.md
+          - Readiness Gate: engineering/ES-114/readiness_gate.md
+          - Stage Manifest: engineering/ES-114/stage_manifest.md
+  - Templates:
+      - Overview: template-library/README.md
+      - Artifact Map: template-library/artifact_map.md
+      - Artifact Catalog: template-library/artifact_catalog.md
+      - Vision:
+          - Overview: template-library/vision/README.md
+          - Problem Statement: template-library/vision/problem_statement.md
+          - Vision Statement: template-library/vision/vision_statement.md
+          - Stakeholders: template-library/vision/stakeholders.md
+          - Scope: template-library/vision/scope.md
+          - Assumptions: template-library/vision/assumptions.md
+          - Success Metrics: template-library/vision/success_metrics.md
+          - Vision Readiness Summary: template-library/vision/vision_readiness_summary.md
+      - Requirements:
+          - Overview: template-library/requirements/README.md
+          - Requirements Overview: template-library/requirements/requirements_overview.md
+          - Functional Requirements: template-library/requirements/functional_requirements.md
+          - Non-Functional Requirements: template-library/requirements/non_functional_requirements.md
+          - Constraints: template-library/requirements/constraints.md
+          - Use Cases: template-library/requirements/use_cases.md
+          - Traceability Matrix: template-library/requirements/traceability_matrix.md
+          - Requirements Review: template-library/requirements/requirements_review.md
+          - Requirements Readiness Summary: template-library/requirements/requirements_readiness_summary.md
+      - Planning:
+          - Overview: template-library/planning/README.md
+          - Planning Overview: template-library/planning/planning_overview.md
+          - Work Breakdown Structure: template-library/planning/work_breakdown_structure.md
+          - Roles and Responsibilities: template-library/planning/roles_and_responsibilities.md
+          - Milestones: template-library/planning/milestones.md
+          - Dependency Map: template-library/planning/dependency_map.md
+          - Estimation Record: template-library/planning/estimation_record.md
+          - Risk Register: template-library/planning/risk_register.md
+          - Planning Review: template-library/planning/planning_review.md
+          - Planning Readiness Summary: template-library/planning/planning_readiness_summary.md
+      - Architecture:
+          - Overview: template-library/architecture/README.md
+          - Architecture Overview: template-library/architecture/architecture_overview.md
+          - System Context: template-library/architecture/system_context.md
+          - Component Model: template-library/architecture/component_model.md
+          - Data and Evidence Flow: template-library/architecture/data_and_evidence_flow.md
+          - Quality Attribute Strategy: template-library/architecture/quality_attribute_strategy.md
+          - AI-Control Architecture: template-library/architecture/ai_control_architecture.md
+          - Architecture Decision Records: template-library/architecture/architecture_decision_records.md
+          - Architecture Review: template-library/architecture/architecture_review.md
+          - Architecture Readiness Summary: template-library/architecture/architecture_readiness_summary.md
+      - Design:
+          - Overview: template-library/design/README.md
+          - Design Overview: template-library/design/design_overview.md
+          - Interface Design: template-library/design/interface_design.md
+          - Data Design: template-library/design/data_design.md
+          - Workflow Design: template-library/design/workflow_design.md
+          - Access-Control Design: template-library/design/access_control_design.md
+          - AI Interaction Design: template-library/design/ai_interaction_design.md
+          - Error and Exception Design: template-library/design/error_and_exception_design.md
+          - Technical Decision Records: template-library/design/technical_decision_records.md
+          - Design Review: template-library/design/design_review.md
+          - Design Readiness Summary: template-library/design/design_readiness_summary.md
+      - Implementation:
+         - Overview: template-library/implementation/README.md
+         - ES-106 Implementation Readiness:
+             - Implementation Readiness Overview: template-library/implementation/implementation_readiness_overview.md
+             - Repository Readiness Check: template-library/implementation/repository_readiness_check.md
+             - Branch and Workflow Plan: template-library/implementation/branch_and_workflow_plan.md
+             - Implementation Work Items: template-library/implementation/implementation_work_items.md
+             - Implementation Guardrails: template-library/implementation/implementation_guardrails.md
+             - AI-Use Plan: template-library/implementation/ai_use_plan.md
+             - Verification Precheck: template-library/implementation/verification_precheck.md
+             - Implementation Review Plan: template-library/implementation/implementation_review_plan.md
+             - Implementation Readiness Summary: template-library/implementation/implementation_readiness_summary.md
+         - ES-107 AI-Assisted Implementation:
+             - ES-107 Guide: template-library/implementation/README_ES-107.md
+             - Implementation Log: template-library/implementation/implementation_log.md
+             - AI Assistance Log: template-library/implementation/ai_assistance_log.md
+             - Implementation Evidence: template-library/implementation/implementation_evidence.md
+             - Implementation Decision Records: template-library/implementation/implementation_decision_records.md
+             - Implementation Risk Updates: template-library/implementation/implementation_risk_updates.md
+             - Verification Notes: template-library/implementation/verification_notes.md
+             - Work Item Completion Records: template-library/implementation/work_item_completion_records.md
+             - Implementation Summary: template-library/implementation/implementation_summary.md
+      - Integration:
+         - Overview: template-library/integration/README.md
+         - Code Review Overview: template-library/integration/code_review_overview.md
+         - Pull Request Review Record: template-library/integration/pull_request_review_record.md
+         - Traceability Review: template-library/integration/traceability_review.md
+         - AI Implementation Review: template-library/integration/ai_implementation_review.md
+         - Guardrail Review: template-library/integration/guardrail_review.md
+         - Integration Plan: template-library/integration/integration_plan.md
+         - Integration Verification Record: template-library/integration/integration_verification_record.md
+         - Repository State Review: template-library/integration/repository_state_review.md
+         - Review Findings: template-library/integration/review_findings.md
+         - Integration Decision Record: template-library/integration/integration_decision_record.md
+         - Integration Readiness Summary: template-library/integration/integration_readiness_summary.md
+      - Testing:
+         - Overview: template-library/testing/README.md
+         - Test Strategy: template-library/testing/test_strategy.md
+         - Test Plan: template-library/testing/test_plan.md
+         - Test Cases: template-library/testing/test_cases.md
+         - Verification Matrix: template-library/testing/verification_matrix.md
+         - Test Execution Record: template-library/testing/test_execution_record.md
+         - Defect Log: template-library/testing/defect_log.md
+         - Guardrail Verification: template-library/testing/guardrail_verification.md
+         - AI Verification Record: template-library/testing/ai_verification_record.md
+         - Regression Check Record: template-library/testing/regression_check_record.md
+         - Testing Readiness Summary: template-library/testing/testing_readiness_summary.md
+      - Release:
+         - Overview: template-library/release/README.md
+         - Release Candidate Summary: template-library/release/release_candidate_summary.md
+         - Release Scope: template-library/release/release_scope.md
+         - Release Evidence Index: template-library/release/release_evidence_index.md
+         - Defect and Risk Assessment: template-library/release/defect_and_risk_assessment.md
+         - Guardrail Release Review: template-library/release/guardrail_release_review.md
+         - AI Release Review: template-library/release/ai_release_review.md
+         - Release Conditions: template-library/release/release_conditions.md
+         - Release Readiness Review: template-library/release/release_readiness_review.md
+         - Release Decision Record: template-library/release/release_decision_record.md
+         - Release Readiness Summary: template-library/release/release_readiness_summary.md
+      - Operations:
+         - Overview: template-library/operations/README.md
+         - Operational Readiness Overview: template-library/operations/operational_readiness_overview.md
+         - Operational Scope: template-library/operations/operational_scope.md
+         - Support Model: template-library/operations/support_model.md
+         - Monitoring and Observability Plan: template-library/operations/monitoring_and_observability_plan.md
+         - Incident Response Plan: template-library/operations/incident_response_plan.md
+         - Rollback and Stop Plan: template-library/operations/rollback_and_stop_plan.md
+         - User Transition Plan: template-library/operations/user_transition_plan.md
+         - Operational Risk Register: template-library/operations/operational_risk_register.md
+         - Operational Readiness Review: template-library/operations/operational_readiness_review.md
+         - Operational Readiness Summary: template-library/operations/operational_readiness_summary.md
+      - Deployment:
+         - Overview: template-library/deployment/README.md
+         - Deployment Overview: template-library/deployment/deployment_overview.md
+         - Deployment Scope: template-library/deployment/deployment_scope.md
+         - Environment Readiness Check: template-library/deployment/environment_readiness_check.md
+         - Deployment Plan: template-library/deployment/deployment_plan.md
+         - Access and Data Transition Record: template-library/deployment/access_and_data_transition_record.md
+         - Transition Communication: template-library/deployment/transition_communication.md
+         - Rollback Validation Record: template-library/deployment/rollback_validation_record.md
+         - Deployment Execution Record: template-library/deployment/deployment_execution_record.md
+         - Post-Deployment Check: template-library/deployment/post_deployment_check.md
+         - Deployment Readiness Summary: template-library/deployment/deployment_readiness_summary.md
+      - Monitoring:
+         - Overview: template-library/monitoring/README.md
+         - Operations Monitoring Overview: template-library/monitoring/operations_monitoring_overview.md
+         - Monitoring Log: template-library/monitoring/monitoring_log.md
+         - Operational Event Log: template-library/monitoring/operational_event_log.md
+         - Incident Log: template-library/monitoring/incident_log.md
+         - Access and Data Monitoring: template-library/monitoring/access_and_data_monitoring.md
+         - Guardrail Monitoring: template-library/monitoring/guardrail_monitoring.md
+         - AI Monitoring Record: template-library/monitoring/ai_monitoring_record.md
+         - User Feedback Log: template-library/monitoring/user_feedback_log.md
+         - Risk and Issue Updates: template-library/monitoring/risk_and_issue_updates.md
+         - Operations Monitoring Summary: template-library/monitoring/operations_monitoring_summary.md
+      - Stewardship:
+         - Overview: template-library/stewardship/README.md
+         - Post-Release Learning Overview: template-library/stewardship/post_release_learning_overview.md
+         - Operations Evidence Review: template-library/stewardship/operations_evidence_review.md
+         - Lessons Learned: template-library/stewardship/lessons_learned.md
+         - Incident and Defect Learning: template-library/stewardship/incident_and_defect_learning.md
+         - User Feedback Synthesis: template-library/stewardship/user_feedback_synthesis.md
+         - Guardrail and AI Learning: template-library/stewardship/guardrail_and_ai_learning.md
+         - Technical Debt and Improvement Backlog: template-library/stewardship/technical_debt_and_improvement_backlog.md
+         - Stewardship Plan: template-library/stewardship/stewardship_plan.md
+         - Next-Cycle Recommendations: template-library/stewardship/next_cycle_recommendations.md
+         - Stewardship Summary: template-library/stewardship/stewardship_summary.md
+      - Cross-Cutting:
+         - Overview: template-library/cross-cutting/README.md
+         - Repository Conventions: template-library/cross-cutting/repository_conventions.md
+         - Decision Record: template-library/cross-cutting/decision_record.md
+         - Evidence Record: template-library/cross-cutting/evidence_record.md
+         - Review Checklist: template-library/cross-cutting/review_checklist.md
+         - Issue Log: template-library/cross-cutting/issue_log.md
+         - Action Item Register: template-library/cross-cutting/action_item_register.md
+         - Assumption Log: template-library/cross-cutting/assumption_log.md
+         - Change Log: template-library/cross-cutting/change_log.md
+         - Meeting Notes: template-library/cross-cutting/meeting_notes.md
+         - Engineering Journal: template-library/cross-cutting/engineering_journal.md
+      - Governance:
+         - Overview: template-library/governance/README.md
+         - Governance Model: template-library/governance/governance_model.md
+         - AI Governance: template-library/governance/ai_governance.md
+         - Evidence Governance: template-library/governance/evidence_governance.md
+         - Risk and Exception Governance: template-library/governance/risk_and_exception_governance.md
+         - Release Governance: template-library/governance/release_governance.md
+         - Stewardship Governance: template-library/governance/stewardship_governance.md
+         - Governance Readiness Summary: template-library/governance/governance_readiness_summary.md
+  - Examples:
+      - Overview: examples/README.md
+      - LMU/COICP:
+          - Overview: examples/lmu-coicp/README.md
+          - Repository-Wide Assets:
+              - Overview: examples/lmu-coicp/shared/README.md
+              - Repository Conventions: examples/lmu-coicp/shared/repository_conventions.md
+              - Glossary: examples/lmu-coicp/shared/glossary.md
+              - Decision Log: examples/lmu-coicp/shared/decision_log.md
+              - Risk Register: examples/lmu-coicp/shared/risk_register.md
+              - AI Usage Log: examples/lmu-coicp/shared/ai_usage_log.md
+              - Artifact Index: examples/lmu-coicp/shared/artifact_index.md
+              - Stakeholder Directory: examples/lmu-coicp/shared/stakeholder_directory.md
+          - Vision:
+              - Overview: examples/lmu-coicp/vision/README.md
+              - Problem Statement: examples/lmu-coicp/vision/problem_statement.md
+              - Vision Statement: examples/lmu-coicp/vision/vision_statement.md
+              - Stakeholders: examples/lmu-coicp/vision/stakeholders.md
+              - Scope: examples/lmu-coicp/vision/scope.md
+              - Assumptions: examples/lmu-coicp/vision/assumptions.md
+              - Success Metrics: examples/lmu-coicp/vision/success_metrics.md
+              - Vision Readiness Summary: examples/lmu-coicp/vision/vision_readiness_summary.md
+          - Requirements:
+              - Overview: examples/lmu-coicp/requirements/README.md
+              - Requirements Overview: examples/lmu-coicp/requirements/requirements_overview.md
+              - Functional Requirements: examples/lmu-coicp/requirements/functional_requirements.md
+              - Non-Functional Requirements: examples/lmu-coicp/requirements/non_functional_requirements.md
+              - Constraints: examples/lmu-coicp/requirements/constraints.md
+              - Use Cases: examples/lmu-coicp/requirements/use_cases.md
+              - Traceability Matrix: examples/lmu-coicp/requirements/traceability_matrix.md
+              - Requirements Review: examples/lmu-coicp/requirements/requirements_review.md
+              - Requirements Readiness Summary: examples/lmu-coicp/requirements/requirements_readiness_summary.md
+          - Planning:
+              - Overview: examples/lmu-coicp/planning/README.md
+              - Planning Overview: examples/lmu-coicp/planning/planning_overview.md
+              - Work Breakdown Structure: examples/lmu-coicp/planning/work_breakdown_structure.md
+              - Milestones: examples/lmu-coicp/planning/milestones.md
+              - Roles and Responsibilities: examples/lmu-coicp/planning/roles_and_responsibilities.md
+              - Risk Register: examples/lmu-coicp/planning/risk_register.md
+              - Dependency Map: examples/lmu-coicp/planning/dependency_map.md
+              - Estimation Record: examples/lmu-coicp/planning/estimation_record.md
+              - Planning Review: examples/lmu-coicp/planning/planning_review.md
+              - Planning Readiness Summary: examples/lmu-coicp/planning/planning_readiness_summary.md
+          - Architecture:
+              - Overview: examples/lmu-coicp/architecture/README.md
+              - Architecture Overview: examples/lmu-coicp/architecture/architecture_overview.md
+              - System Context: examples/lmu-coicp/architecture/system_context.md
+              - Component Model: examples/lmu-coicp/architecture/component_model.md
+              - Data and Evidence Flow: examples/lmu-coicp/architecture/data_and_evidence_flow.md
+              - Quality Attribute Strategy: examples/lmu-coicp/architecture/quality_attribute_strategy.md
+              - AI-Control Architecture: examples/lmu-coicp/architecture/ai_control_architecture.md
+              - Architecture Decision Records: examples/lmu-coicp/architecture/architecture_decision_records.md
+              - Architecture Review: examples/lmu-coicp/architecture/architecture_review.md
+              - Architecture Readiness Summary: examples/lmu-coicp/architecture/architecture_readiness_summary.md
+          - Design:
+              - Overview: examples/lmu-coicp/design/README.md
+              - Design Overview: examples/lmu-coicp/design/design_overview.md
+              - Interface Design: examples/lmu-coicp/design/interface_design.md
+              - Data Design: examples/lmu-coicp/design/data_design.md
+              - Workflow Design: examples/lmu-coicp/design/workflow_design.md
+              - Access-Control Design: examples/lmu-coicp/design/access_control_design.md
+              - AI Interaction Design: examples/lmu-coicp/design/ai_interaction_design.md
+              - Error and Exception Design: examples/lmu-coicp/design/error_and_exception_design.md
+              - Technical Decision Records: examples/lmu-coicp/design/technical_decision_records.md
+              - Design Review: examples/lmu-coicp/design/design_review.md
+              - Design Readiness Summary: examples/lmu-coicp/design/design_readiness_summary.md
+          - Implementation:
+              - Overview: examples/lmu-coicp/implementation/README.md
+              - Implementation Readiness Overview: examples/lmu-coicp/implementation/implementation_readiness_overview.md
+              - Branch and Workflow Plan: examples/lmu-coicp/implementation/branch_and_workflow_plan.md
+              - Implementation Work Items: examples/lmu-coicp/implementation/implementation_work_items.md
+              - Implementation Guardrails: examples/lmu-coicp/implementation/implementation_guardrails.md
+              - AI-Use Plan: examples/lmu-coicp/implementation/ai_use_plan.md
+              - Verification Precheck: examples/lmu-coicp/implementation/verification_precheck.md
+              - Repository Readiness Check: examples/lmu-coicp/implementation/repository_readiness_check.md
+              - Implementation Review Plan: examples/lmu-coicp/implementation/implementation_review_plan.md
+              - Implementation Readiness Summary: examples/lmu-coicp/implementation/implementation_readiness_summary.md
+          - AI-Assisted Implementation:
+              - ES-107 Implementation Log: examples/lmu-coicp/implementation/implementation_log.md
+              - AI Assistance Log: examples/lmu-coicp/implementation/ai_assistance_log.md
+              - Work Item Completion Records: examples/lmu-coicp/implementation/work_item_completion_records.md
+              - Implementation Evidence: examples/lmu-coicp/implementation/implementation_evidence.md
+              - Verification Notes: examples/lmu-coicp/implementation/verification_notes.md
+              - Implementation Decision Records: examples/lmu-coicp/implementation/implementation_decision_records.md
+              - Implementation Risk Updates: examples/lmu-coicp/implementation/implementation_risk_updates.md
+              - Implementation Summary: examples/lmu-coicp/implementation/implementation_summary.md
+          - Integration:
+              - Overview: examples/lmu-coicp/integration/README.md
+              - Code Review Overview: examples/lmu-coicp/integration/code_review_overview.md
+              - Pull Request Review Record: examples/lmu-coicp/integration/pull_request_review_record.md
+              - Traceability Review: examples/lmu-coicp/integration/traceability_review.md
+              - AI Implementation Review: examples/lmu-coicp/integration/ai_implementation_review.md
+              - Guardrail Review: examples/lmu-coicp/integration/guardrail_review.md
+              - Integration Plan: examples/lmu-coicp/integration/integration_plan.md
+              - Integration Verification Record: examples/lmu-coicp/integration/integration_verification_record.md
+              - Review Findings: examples/lmu-coicp/integration/review_findings.md
+              - Integration Decision Record: examples/lmu-coicp/integration/integration_decision_record.md
+              - Integration Readiness Summary: examples/lmu-coicp/integration/integration_readiness_summary.md
+          - Testing:
+              - Overview: examples/lmu-coicp/testing/README.md
+              - Test Strategy: examples/lmu-coicp/testing/test_strategy.md
+              - Test Plan: examples/lmu-coicp/testing/test_plan.md
+              - Test Cases: examples/lmu-coicp/testing/test_cases.md
+              - Verification Matrix: examples/lmu-coicp/testing/verification_matrix.md
+              - Test Execution Record: examples/lmu-coicp/testing/test_execution_record.md
+              - Defect Log: examples/lmu-coicp/testing/defect_log.md
+              - Guardrail Verification: examples/lmu-coicp/testing/guardrail_verification.md
+              - AI Verification Record: examples/lmu-coicp/testing/ai_verification_record.md
+              - Regression Check Record: examples/lmu-coicp/testing/regression_check_record.md
+              - Testing Readiness Summary: examples/lmu-coicp/testing/testing_readiness_summary.md
+          - Release:
+              - Overview: examples/lmu-coicp/release/README.md
+              - Release Candidate Summary: examples/lmu-coicp/release/release_candidate_summary.md
+              - Release Evidence Index: examples/lmu-coicp/release/release_evidence_index.md
+              - Defect and Risk Assessment: examples/lmu-coicp/release/defect_and_risk_assessment.md
+              - Guardrail Release Review: examples/lmu-coicp/release/guardrail_release_review.md
+              - AI Release Review: examples/lmu-coicp/release/ai_release_review.md
+              - Release Scope: examples/lmu-coicp/release/release_scope.md
+              - Release Decision Record: examples/lmu-coicp/release/release_decision_record.md
+              - Release Conditions: examples/lmu-coicp/release/release_conditions.md
+              - Release Readiness Review: examples/lmu-coicp/release/release_readiness_review.md
+              - Release Readiness Summary: examples/lmu-coicp/release/release_readiness_summary.md
+          - Operations:
+              - Overview: examples/lmu-coicp/operations/README.md
+              - Operational Readiness Overview: examples/lmu-coicp/operations/operational_readiness_overview.md
+              - Operational Scope: examples/lmu-coicp/operations/operational_scope.md
+              - Support Model: examples/lmu-coicp/operations/support_model.md
+              - Monitoring and Observability Plan: examples/lmu-coicp/operations/monitoring_and_observability_plan.md
+              - Incident Response Plan: examples/lmu-coicp/operations/incident_response_plan.md
+              - Rollback and Stop Plan: examples/lmu-coicp/operations/rollback_and_stop_plan.md
+              - User Transition Plan: examples/lmu-coicp/operations/user_transition_plan.md
+              - Operational Risk Register: examples/lmu-coicp/operations/operational_risk_register.md
+              - Operational Readiness Review: examples/lmu-coicp/operations/operational_readiness_review.md
+              - Operational Readiness Summary: examples/lmu-coicp/operations/operational_readiness_summary.md
+          - Deployment:
+              - Overview: examples/lmu-coicp/deployment/README.md
+              - Deployment Overview: examples/lmu-coicp/deployment/deployment_overview.md
+              - Deployment Scope: examples/lmu-coicp/deployment/deployment_scope.md
+              - Deployment Plan: examples/lmu-coicp/deployment/deployment_plan.md
+              - Environment Readiness Check: examples/lmu-coicp/deployment/environment_readiness_check.md
+              - Deployment Execution Record: examples/lmu-coicp/deployment/deployment_execution_record.md
+              - Transition Communication: examples/lmu-coicp/deployment/transition_communication.md
+              - Access and Data Transition Record: examples/lmu-coicp/deployment/access_and_data_transition_record.md
+              - Rollback Validation Record: examples/lmu-coicp/deployment/rollback_validation_record.md
+              - Post-Deployment Check: examples/lmu-coicp/deployment/post_deployment_check.md
+              - Deployment Readiness Summary: examples/lmu-coicp/deployment/deployment_readiness_summary.md
+          - Monitoring:
+              - Overview: examples/lmu-coicp/monitoring/README.md
+              - Operations Monitoring Overview: examples/lmu-coicp/monitoring/operations_monitoring_overview.md
+              - Monitoring Log: examples/lmu-coicp/monitoring/monitoring_log.md
+              - Operational Event Log: examples/lmu-coicp/monitoring/operational_event_log.md
+              - Incident Log: examples/lmu-coicp/monitoring/incident_log.md
+              - Access and Data Monitoring: examples/lmu-coicp/monitoring/access_and_data_monitoring.md
+              - Guardrail Monitoring: examples/lmu-coicp/monitoring/guardrail_monitoring.md
+              - AI Monitoring Record: examples/lmu-coicp/monitoring/ai_monitoring_record.md
+              - User Feedback Log: examples/lmu-coicp/monitoring/user_feedback_log.md
+              - Risk and Issue Updates: examples/lmu-coicp/monitoring/risk_and_issue_updates.md
+              - Operations Monitoring Summary: examples/lmu-coicp/monitoring/operations_monitoring_summary.md
+          - Stewardship:
+              - Overview: examples/lmu-coicp/stewardship/README.md
+              - Post-Release Learning Overview: examples/lmu-coicp/stewardship/post_release_learning_overview.md
+              - Operations Evidence Review: examples/lmu-coicp/stewardship/operations_evidence_review.md
+              - Lessons Learned: examples/lmu-coicp/stewardship/lessons_learned.md
+              - Incident and Defect Learning: examples/lmu-coicp/stewardship/incident_and_defect_learning.md
+              - User Feedback Synthesis: examples/lmu-coicp/stewardship/user_feedback_synthesis.md
+              - Guardrail and AI Learning: examples/lmu-coicp/stewardship/guardrail_and_ai_learning.md
+              - Technical Debt and Improvement Backlog: examples/lmu-coicp/stewardship/technical_debt_and_improvement_backlog.md
+              - Stewardship Plan: examples/lmu-coicp/stewardship/stewardship_plan.md
+              - Next-Cycle Recommendations: examples/lmu-coicp/stewardship/next_cycle_recommendations.md
+              - Stewardship Summary: examples/lmu-coicp/stewardship/stewardship_summary.md
+          - Governance:
+              - Overview: examples/lmu-coicp/governance/README.md
+              - Governance Model: examples/lmu-coicp/governance/governance_model.md
+              - AI Governance: examples/lmu-coicp/governance/ai_governance.md
+              - Evidence Governance: examples/lmu-coicp/governance/evidence_governance.md
+              - Risk and Exception Governance: examples/lmu-coicp/governance/risk_and_exception_governance.md
+              - Release Governance: examples/lmu-coicp/governance/release_governance.md
+              - Stewardship Governance: examples/lmu-coicp/governance/stewardship_governance.md
+              - Governance Readiness Summary: examples/lmu-coicp/governance/governance_readiness_summary.md
+
+

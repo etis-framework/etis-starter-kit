@@ -1,0 +1,23 @@
+# MkDocs Navigation Pattern for Engineering Stages
+
+nav:
+  - Engineering Platform:
+      - ES-100 — Start Here:
+          - Welcome: engineering/ES-100/README.md
+          - Navigation: engineering/ES-100/navigation.md
+          - First Day Guide: engineering/ES-100/first_day_guide.md
+          - Engineering Journey: engineering/ES-100/engineering_journey.md
+          - Engineering Principles: engineering/ES-100/engineering_principles.md
+          - Stage Map: engineering/ES-100/stage_map.md
+          - Glossary: engineering/ES-100/glossary.md
+          - Readiness Gate: engineering/ES-100/readiness_gate.md
+          - Stage Manifest: engineering/ES-100/stage_manifest.md
+      - ES-101 — Vision and Problem Definition:
+          - Welcome: engineering/ES-101/README.md
+          - Navigation: engineering/ES-101/navigation.md
+          - Engineering Context: engineering/ES-101/engineering_context.md
+          - Activities: engineering/ES-101/activities.md
+          - Evidence: engineering/ES-101/evidence.md
+          - Outputs: engineering/ES-101/outputs.md
+          - Readiness Gate: engineering/ES-101/readiness_gate.md
+          - Stage Manifest: engineering/ES-101/stage_manifest.md

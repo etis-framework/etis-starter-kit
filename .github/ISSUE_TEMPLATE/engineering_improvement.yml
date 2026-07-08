@@ -1,0 +1,37 @@
+name: Engineering improvement
+description: Suggest an improvement to templates, examples, lifecycle guidance, governance, or repository structure.
+title: "[Improvement]: "
+labels: ["enhancement", "engineering"]
+body:
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Proposed improvement
+      description: Describe the improvement.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Platform overview
+        - Engineering stages
+        - Template Library
+        - Examples
+        - Project Workspace
+        - Governance
+        - Visual design
+        - Repository automation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why does this improve ETIS?
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+# ETIS Engineering Platform Starter Kit
+#
+# Automatically request reviews from the ETIS Framework maintainers.
+
+# Default owner for the entire repository
+* @etis-framework/core-maintainers

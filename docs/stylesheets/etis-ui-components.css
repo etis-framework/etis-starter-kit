@@ -1,0 +1,602 @@
+/* ============================================================
+   ETIS UI Components — Corrected Stable Baseline
+   File: docs/stylesheets/etis-ui-components.css
+
+   Purpose:
+   Stable reusable ETIS components for the Starter Kit.
+   This version restores the cleaner Readiness Gate styling and
+   removes the overbuilt Stage Overview v1.3 component set.
+   ============================================================ */
+
+:root {
+  --etis-ui-deep: #020714;
+  --etis-ui-navy: #06142d;
+  --etis-ui-blue: #0f5ed7;
+  --etis-ui-blue-2: #1f7aff;
+  --etis-ui-gold: #f2bf58;
+  --etis-ui-green: #10a85a;
+  --etis-ui-purple: #7b3fc8;
+  --etis-ui-red: #b42318;
+  --etis-ui-ink: #07152c;
+  --etis-ui-muted: #526179;
+  --etis-ui-line: #d8e0ee;
+  --etis-ui-soft: #f6f8fc;
+  --etis-ui-white: #ffffff;
+}
+
+/* ---------- Page typography ---------- */
+
+.md-typeset h1:not(.etis-stage-banner h1):not(.etis-readiness-header h1) {
+  color: #526179;
+  font-weight: 400;
+}
+
+.md-typeset h2 {
+  color: var(--etis-ui-ink);
+  font-weight: 500;
+}
+
+.md-typeset p {
+  line-height: 1.65;
+}
+
+/* ---------- Stage Banner ---------- */
+
+.etis-stage-banner {
+  margin: 1rem 0 1.2rem;
+  padding: 1.45rem 1.55rem;
+  border-radius: 1rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 84% 14%, rgba(31,122,255,.20), transparent 28%),
+    linear-gradient(135deg, var(--etis-ui-navy) 0%, #0b2b57 72%, #09224a 100%);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 18px 34px rgba(7,21,44,.16);
+}
+
+.etis-stage-banner-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.etis-stage-eyebrow {
+  color: var(--etis-ui-gold);
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-weight: 900;
+  font-size: .72rem;
+  margin: 0 0 .45rem !important;
+}
+
+.etis-stage-banner h1 {
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  line-height: 1.08;
+  margin: 0 0 .55rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.etis-stage-banner p {
+  color: rgba(234,242,255,.92);
+  margin: 0;
+  max-width: 820px;
+}
+
+.etis-stage-badge-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .55rem;
+  min-width: 180px;
+}
+
+.etis-stage-badge {
+  display: block;
+  text-align: center;
+  padding: .55rem .75rem;
+  border-radius: .48rem;
+  color: #fff;
+  font-weight: 850;
+  background: rgba(255,255,255,.11);
+  border: 1px solid rgba(255,255,255,.24);
+}
+
+.etis-stage-badge.primary {
+  background: linear-gradient(135deg, var(--etis-ui-blue), var(--etis-ui-blue-2));
+  border-color: #74afff;
+}
+
+.etis-stage-badge.gold {
+  background: linear-gradient(135deg, #8a6722, #d49b35);
+  border-color: rgba(242,191,88,.75);
+}
+
+/* ---------- Metadata Strip ---------- */
+
+.etis-metadata-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.etis-metadata-strip div {
+  background: #fff;
+  border: 1px solid var(--etis-ui-line);
+  border-radius: .65rem;
+  padding: .72rem .78rem;
+  min-height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(7,21,44,.06);
+}
+
+.etis-metadata-strip strong {
+  display: block;
+  color: var(--etis-ui-blue);
+  font-size: .66rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: .2rem;
+}
+
+.etis-metadata-strip span {
+  display: block;
+  color: var(--etis-ui-ink);
+  font-size: .88rem;
+  font-weight: 750;
+  line-height: 1.22;
+}
+
+/* ---------- Engineering Navigation Bar ---------- */
+
+.etis-engineering-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: .8rem;
+  align-items: stretch;
+  margin: 1rem 0 1.35rem;
+}
+
+.etis-engineering-nav a,
+.etis-engineering-nav .etis-engineering-nav-current {
+  border: 1px solid var(--etis-ui-line);
+  border-radius: .65rem;
+  background: #fff;
+  padding: .75rem .9rem;
+  box-shadow: 0 8px 18px rgba(7,21,44,.05);
+  text-decoration: none !important;
+}
+
+.etis-engineering-nav a {
+  color: var(--etis-ui-ink) !important;
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.etis-engineering-nav a:hover {
+  transform: translateY(-2px);
+  border-color: var(--etis-ui-blue);
+  box-shadow: 0 14px 24px rgba(7,21,44,.10);
+}
+
+.etis-engineering-nav-label {
+  display: block;
+  color: var(--etis-ui-blue);
+  font-size: .66rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  margin-bottom: .18rem;
+}
+
+.etis-engineering-nav-title {
+  display: block;
+  color: var(--etis-ui-navy);
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.etis-engineering-nav-current {
+  min-width: 11rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.etis-engineering-nav-current .etis-engineering-nav-label {
+  color: var(--etis-ui-gold);
+}
+
+.etis-engineering-nav-next {
+  text-align: right;
+}
+
+/* ---------- Callouts ---------- */
+
+.etis-ui-callout {
+  margin: 1.15rem 0;
+  padding: 1rem 1.1rem;
+  border-radius: .55rem;
+  background: #fff;
+  border: 1px solid var(--etis-ui-line);
+  border-left: 5px solid var(--etis-ui-blue);
+  box-shadow: 0 8px 18px rgba(7,21,44,.06);
+}
+
+.etis-ui-callout strong {
+  display: block;
+  color: var(--etis-ui-navy);
+  margin-bottom: .35rem;
+}
+
+.etis-ui-callout p {
+  margin: 0 0 .45rem !important;
+  color: var(--etis-ui-muted);
+}
+
+.etis-ui-callout p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.etis-ui-callout ul {
+  margin-bottom: 0 !important;
+}
+
+.etis-ui-callout.insight {
+  border-left-color: var(--etis-ui-blue);
+  background: linear-gradient(90deg, rgba(15,94,215,.08), #fff 34%);
+}
+
+.etis-ui-callout.evidence {
+  border-left-color: var(--etis-ui-green);
+  background: linear-gradient(90deg, rgba(16,168,90,.08), #fff 34%);
+}
+
+.etis-ui-callout.ai {
+  border-left-color: var(--etis-ui-purple);
+  background: linear-gradient(90deg, rgba(123,63,200,.08), #fff 34%);
+}
+
+.etis-ui-callout.governance {
+  border-left-color: var(--etis-ui-gold);
+  background: linear-gradient(90deg, rgba(242,191,88,.14), #fff 34%);
+}
+
+.etis-ui-callout.warning {
+  border-left-color: var(--etis-ui-red);
+  background: linear-gradient(90deg, rgba(180,35,24,.08), #fff 34%);
+}
+
+/* ---------- Evidence / Outputs Panel ---------- */
+
+.etis-evidence-panel {
+  margin: 1rem 0 1.35rem;
+  padding: 1rem 1.1rem;
+  border-radius: .75rem;
+  border: 1px solid rgba(16,168,90,.25);
+  background: linear-gradient(90deg, rgba(16,168,90,.08), #fff 36%);
+  box-shadow: 0 8px 18px rgba(7,21,44,.06);
+}
+
+.etis-evidence-panel h3 {
+  margin-top: 0 !important;
+  color: var(--etis-ui-navy);
+}
+
+.etis-evidence-panel ul {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Gate Card ---------- */
+
+.etis-gate-card {
+  margin: 1rem 0 1.15rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--etis-ui-line);
+  border-radius: .8rem;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(7,21,44,.07);
+}
+
+.etis-gate-card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .75rem;
+  align-items: center;
+  margin: 0;
+  padding: .82rem 1rem;
+  background: linear-gradient(90deg, rgba(15,94,215,.10), rgba(255,255,255,1) 44%);
+  border-bottom: 1px solid var(--etis-ui-line);
+}
+
+.etis-gate-card-header span {
+  min-width: 4.4rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--etis-ui-blue), var(--etis-ui-blue-2));
+  color: #fff;
+  font-weight: 900;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.etis-gate-card-header strong {
+  color: var(--etis-ui-navy);
+  font-size: 1.08rem;
+}
+
+.etis-gate-body {
+  padding: .95rem 1rem 1rem;
+}
+
+.etis-gate-label {
+  display: block;
+  color: var(--etis-ui-blue);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  margin-bottom: .18rem;
+}
+
+.etis-gate-question {
+  color: var(--etis-ui-navy);
+  font-weight: 850;
+  margin: 0 0 .75rem !important;
+  line-height: 1.45;
+}
+
+.etis-gate-expected {
+  margin: .7rem 0 0;
+  color: var(--etis-ui-muted);
+}
+
+.etis-gate-expected p {
+  margin: .2rem 0 0 !important;
+}
+
+.etis-gate-review {
+  margin-top: .85rem;
+  padding: .65rem .75rem;
+  border-radius: .5rem;
+  background: var(--etis-ui-soft);
+  color: var(--etis-ui-muted);
+  border: 1px solid rgba(216,224,238,.72);
+}
+
+.etis-gate-review strong {
+  color: var(--etis-ui-navy);
+}
+
+.etis-gate-status {
+  margin-top: .85rem;
+  padding: .68rem .75rem;
+  border-radius: .55rem;
+  border: 1px solid rgba(15,94,215,.18);
+  background: linear-gradient(90deg, rgba(15,94,215,.07), #fff 42%);
+  color: var(--etis-ui-ink);
+}
+
+.etis-gate-status strong {
+  color: var(--etis-ui-navy);
+  margin-right: .45rem;
+}
+
+.etis-status-chip {
+  display: inline-block;
+  margin: .18rem .25rem .18rem 0;
+  padding: .32rem .55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15,94,215,.25);
+  background: #fff;
+  color: var(--etis-ui-navy);
+  font-weight: 750;
+  line-height: 1.1;
+}
+
+/* ---------- Next Activity ---------- */
+
+.etis-next-activity {
+  margin: 1.65rem 0 1rem;
+  padding: 1.35rem 1.4rem;
+  border-radius: .85rem;
+  background: linear-gradient(135deg, var(--etis-ui-navy) 0%, #0b2b57 100%);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 14px 26px rgba(7,21,44,.14);
+}
+
+.etis-next-activity h2 {
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: 0 !important;
+  margin-bottom: .45rem !important;
+  border: 0 !important;
+}
+
+.etis-next-activity p {
+  color: rgba(234,242,255,.88);
+  margin-bottom: 1rem;
+}
+
+.etis-next-activity a {
+  display: inline-block;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, var(--etis-ui-blue), var(--etis-ui-blue-2));
+  border: 1px solid #74afff;
+  border-radius: .48rem;
+  padding: .75rem 1rem;
+  font-weight: 850;
+}
+
+/* ---------- Compact Resource Cards ---------- */
+
+.etis-resource-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .85rem;
+  margin: 1rem 0 1.35rem;
+}
+
+.etis-resource-card {
+  display: block;
+  color: var(--etis-ui-ink) !important;
+  text-decoration: none !important;
+  border: 1px solid var(--etis-ui-line);
+  border-radius: .65rem;
+  padding: .9rem 1rem;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(7,21,44,.06);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.etis-resource-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--etis-ui-blue);
+  box-shadow: 0 14px 24px rgba(7,21,44,.10);
+}
+
+.etis-resource-card strong {
+  display: block;
+  color: var(--etis-ui-navy);
+  margin-bottom: .25rem;
+}
+
+.etis-resource-card span {
+  display: block;
+  color: var(--etis-ui-muted);
+  line-height: 1.35;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 1100px) {
+  .etis-stage-banner-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-stage-badge-stack {
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 0;
+  }
+
+  .etis-metadata-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .etis-engineering-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-engineering-nav-next {
+    text-align: left;
+  }
+
+  .etis-engineering-nav-current {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .etis-resource-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .etis-metadata-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-stage-badge-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-stage-banner {
+    padding: 1.15rem 1rem;
+  }
+
+  .etis-gate-card-header {
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+}
+
+/* ---------- ES-102+ Metadata / Navigation Text Safety Fix ----------
+   Purpose:
+   - Preserve the stable ETIS component baseline.
+   - Prevent metadata values from breaking words awkwardly.
+   - Make newer ES-102+ direct-text metadata/nav values visually match
+     the bolder ES-100/ES-101 component rendering.
+   - Keep repository path chips readable without forcing mid-word breaks.
+   --------------------------------------------------------------- */
+
+/* Newer stage pages sometimes put metadata values directly inside the
+   card div instead of wrapping them in span elements. Target the card
+   itself so those direct text values are styled consistently. */
+.etis-metadata-strip div {
+  color: var(--etis-ui-ink);
+  font-weight: 850;
+  line-height: 1.28;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* Preserve the established blue metadata labels. */
+.etis-metadata-strip strong {
+  font-weight: 900;
+}
+
+/* Preserve styling for older pages that already use span-wrapped values. */
+.etis-metadata-strip span {
+  font-weight: 850;
+  line-height: 1.28;
+  overflow-wrap: normal;
+  word-break: normal;
+  word-wrap: normal;
+  hyphens: none;
+}
+
+/* Repository paths inside metadata cards need to stay readable. Keep them
+   on one line when practical and size them slightly smaller so common paths
+   such as docs/requirements/ and docs/architecture/ fit the card. */
+.etis-metadata-strip code {
+  font-size: .78rem;
+  font-weight: 850;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* ES-102+ engineering navigation cards may use direct text rather than the
+   older title span. This makes the Previous / Current / Next values match
+   the bold visual weight of ES-100 and ES-101 without changing layout. */
+.etis-engineering-nav a,
+.etis-engineering-nav .etis-engineering-nav-current {
+  font-weight: 850;
+  line-height: 1.28;
+}
+
+.etis-engineering-nav-title {
+  font-weight: 850;
+}
+
+/* ============================================================
+   Metadata Path Wrapping Override
+   Prevent long repository paths from overflowing metadata cards.
+   ============================================================ */
+
+.etis-metadata-strip code {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}

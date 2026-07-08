@@ -1,0 +1,38 @@
+name: Bug report
+description: Report something broken in the Starter Kit.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Describe the problem clearly.
+      placeholder: What broke? What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Where is it?
+      description: Provide the page, file path, URL, or section.
+      placeholder: docs/platform/README.md, docs/examples/lmu-coicp/vision/problem_statement.md, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that reproduce the issue.
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Paste logs, screenshots, or `mkdocs build --strict` output if relevant.
+    validations:
+      required: false

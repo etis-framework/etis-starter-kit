@@ -1,0 +1,1160 @@
+/* ETIS Starter Kit Landing V4
+   File location: docs/stylesheets/extra.css
+*/
+
+:root {
+  --etis-deep: #020714;
+  --etis-navy: #06142d;
+  --etis-blue: #0f5ed7;
+  --etis-blue-2: #1f7aff;
+  --etis-gold: #f2bf58;
+  --etis-ink: #07152c;
+  --etis-muted: #526179;
+  --etis-line: #d8e0ee;
+  --etis-soft: #f6f8fc;
+  --etis-green: #10a85a;
+  --etis-purple: #7b3fc8;
+}
+
+/* Themed scrollbar */
+html {
+  scrollbar-color: #2b63d9 #06142d;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06142d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b63d9;
+  border-radius: 8px;
+  border: 2px solid #06142d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c78ff;
+}
+
+/* Material shell */
+.md-header,
+.md-tabs {
+  background: linear-gradient(90deg, #01040c 0%, #06142d 52%, #09224a 100%) !important;
+}
+
+.md-header {
+  box-shadow: none !important;
+}
+
+.md-tabs {
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.md-header__title {
+  font-weight: 750;
+}
+
+.md-tabs__link {
+  font-weight: 700;
+  opacity: .92;
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 1;
+  color: #fff;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.9rem !important;
+  width: auto !important;
+  max-width: 3.2rem !important;
+  object-fit: contain !important;
+}
+
+/* Landing reset */
+.md-main__inner:has(.etis-sk-page),
+.md-content__inner:has(.etis-sk-page),
+.md-content:has(.etis-sk-page),
+.md-typeset:has(.etis-sk-page) {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-content__inner:has(.etis-sk-page)::before {
+  display: none !important;
+}
+
+body:has(.etis-sk-page) .md-main,
+body:has(.etis-sk-page) .md-main__inner,
+body:has(.etis-sk-page) .md-content,
+body:has(.etis-sk-page) .md-content__inner,
+body:has(.etis-sk-page) .md-typeset {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.etis-sk-page {
+  background:
+    radial-gradient(circle at 78% 9%, rgba(31,122,255,.27), transparent 24%),
+    radial-gradient(circle at 44% 30%, rgba(242,191,88,.11), transparent 25%),
+    linear-gradient(90deg, #020714 0%, #06142d 42%, #0b2b57 78%, #09224a 100%);
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.etis-sk-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,.034) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.020) 1px, transparent 1px),
+    radial-gradient(circle at 82% 28%, rgba(74,163,255,.16) 0 1px, transparent 2px);
+  background-size: 88px 88px, 88px 88px, 122px 122px;
+  opacity: .56;
+  z-index: 0;
+}
+
+.etis-sk-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero */
+.etis-sk-hero-inner {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 2.5rem 2.4rem 1.45rem;
+  display: grid;
+  grid-template-columns: minmax(380px, 570px) minmax(760px, 1fr);
+  gap: 3.6rem;
+  align-items: center;
+}
+
+.etis-sk-identity-card {
+  min-height: 410px;
+  padding: 2.1rem 1.9rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.042));
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 34px 60px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.etis-sk-wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 8.2vw, 7.85rem);
+  line-height: .84;
+  color: var(--etis-gold);
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-align: center;
+  text-shadow: 0 5px 0 rgba(0,0,0,.14), 0 0 34px rgba(242,191,88,.20);
+}
+
+.etis-sk-wordmark-rule {
+  height: 2px;
+  width: min(92%, 520px);
+  background: linear-gradient(90deg, transparent, rgba(242,191,88,.95), transparent);
+  margin: .9rem auto .75rem;
+}
+
+.etis-sk-expanded {
+  color: rgba(255,255,255,.94);
+  text-align: center;
+  font-weight: 850;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+
+.etis-sk-kit-label {
+  color: rgba(255,255,255,.84);
+  text-align: center;
+  font-weight: 750;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  font-size: .70rem;
+  margin-top: .42rem;
+}
+
+.etis-sk-identity-text {
+  color: #eaf2ff;
+  text-align: center;
+  max-width: 465px;
+  margin: 1.25rem auto 1.05rem;
+  line-height: 1.56;
+  font-size: .96rem;
+}
+
+.etis-sk-framework-link {
+  display: block;
+  margin: .2rem auto 0;
+  color: #a8d0ff !important;
+  text-decoration: none !important;
+  font-weight: 850;
+  text-align: center;
+}
+
+.etis-sk-framework-link:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.etis-sk-hero-copy {
+  max-width: 920px;
+}
+
+.etis-sk-kicker,
+.etis-sk-eyebrow {
+  color: var(--etis-gold);
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-weight: 900;
+  margin: 0 0 .65rem;
+  font-size: .72rem;
+}
+
+.etis-sk-hero-copy h1 {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.75rem, 4.25vw, 4.2rem);
+  line-height: 1.03;
+  margin: 0 0 1rem;
+  border: none;
+  padding: 0;
+  text-shadow: 0 5px 28px rgba(0,0,0,.30);
+}
+
+.etis-sk-gold {
+  color: var(--etis-gold);
+  font-size: clamp(1.12rem, 1.65vw, 1.38rem);
+  line-height: 1.38;
+  margin: 0 0 1.05rem;
+}
+
+.etis-sk-intro {
+  color: #eaf2ff;
+  font-size: 1.02rem;
+  line-height: 1.62;
+  max-width: 820px;
+}
+
+.etis-sk-path-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.05rem;
+  margin-top: 1.35rem;
+  max-width: 100%;
+}
+
+.etis-sk-path-row a {
+  color: #fff !important;
+  text-decoration: none !important;
+  min-height: 7.2rem;
+  padding: 1.05rem 1rem;
+  border-radius: .65rem;
+  border: 1px solid rgba(255,255,255,.24);
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.045));
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+.etis-sk-path-row a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(242,191,88,.68);
+  background: linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.065));
+  box-shadow: 0 16px 28px rgba(0,0,0,.20);
+}
+
+.etis-sk-path-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f5ed7, #1f7aff);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  font-size: 1rem !important;
+  margin-bottom: .35rem;
+}
+
+.etis-sk-path-row a:nth-child(2) .etis-sk-path-icon { background: linear-gradient(135deg,#a37412,#d49b35); }
+.etis-sk-path-row a:nth-child(3) .etis-sk-path-icon { background: linear-gradient(135deg,#087940,#10a85a); }
+.etis-sk-path-row a:nth-child(4) .etis-sk-path-icon { background: linear-gradient(135deg,#5c2aa5,#7b3fc8); }
+
+.etis-sk-path-row strong,
+.etis-sk-path-row small {
+  display: block;
+  text-align: center;
+}
+
+.etis-sk-path-row strong {
+  font-size: .78rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.etis-sk-path-row small {
+  margin-top: .22rem;
+  color: rgba(234,242,255,.82);
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+/* Section headings */
+.etis-sk-section-heading {
+  max-width: 980px;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+
+.etis-sk-section-heading h2 {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  line-height: 1.08;
+  margin: 0 0 .65rem;
+  border: none;
+  padding: 0;
+}
+
+.etis-sk-section-heading p:not(.etis-sk-eyebrow) {
+  color: rgba(234,242,255,.86);
+  margin: 0 auto;
+  max-width: 820px;
+}
+
+/* Shared section widths */
+.etis-sk-lifecycle-section,
+.etis-sk-destination-grid,
+.etis-sk-stats,
+.etis-sk-principles,
+.etis-sk-relation-section,
+.etis-sk-structure-section,
+.etis-sk-final-cta {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+/* Lifecycle */
+.etis-sk-lifecycle-section {
+  padding-top: 1.2rem;
+  padding-bottom: 1.55rem;
+}
+
+.etis-sk-lifecycle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.05rem;
+}
+
+.etis-sk-life-card {
+  color: #fff !important;
+  text-decoration: none !important;
+  min-height: 150px;
+  border-radius: .75rem;
+  padding: 1.15rem 1.05rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 16px 28px rgba(0,0,0,.18);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.etis-sk-life-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 34px rgba(0,0,0,.24), 0 0 0 1px rgba(242,191,88,.34);
+  filter: brightness(1.05);
+}
+
+.etis-sk-life-card span {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .15em;
+  font-size: .72rem;
+  margin-bottom: .4rem;
+}
+
+.etis-sk-life-card strong {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: .45rem;
+}
+
+.etis-sk-life-card small {
+  color: rgba(255,255,255,.88);
+  line-height: 1.35;
+}
+
+.etis-sk-life-card.start { background: linear-gradient(135deg,#0b2b57,#174273); }
+.etis-sk-life-card.frame { background: linear-gradient(135deg,#8a6722,#d49b35); }
+.etis-sk-life-card.build { background: linear-gradient(135deg,#087940,#10a85a); }
+.etis-sk-life-card.operate { background: linear-gradient(135deg,#4e238a,#7b3fc8); }
+
+/* Destination cards */
+.etis-sk-destination-grid {
+  padding-top: 1.1rem;
+  padding-bottom: 1.55rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.etis-sk-destination {
+  color: #fff !important;
+  text-decoration: none !important;
+  min-height: 235px;
+  padding: 1.35rem 1.25rem;
+  border-radius: .8rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.045));
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 16px 28px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.etis-sk-destination:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 34px rgba(0,0,0,.24), 0 0 0 1px rgba(242,191,88,.34);
+  border-color: rgba(242,191,88,.55);
+  background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.062));
+}
+
+.etis-sk-destination-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f5ed7, #1f7aff);
+  font-size: 1.55rem;
+  margin-bottom: .85rem;
+}
+
+.etis-sk-destination:nth-child(2) .etis-sk-destination-icon { background: linear-gradient(135deg, #a37412, #d49b35); }
+.etis-sk-destination:nth-child(3) .etis-sk-destination-icon { background: linear-gradient(135deg, #087940, #10a85a); }
+.etis-sk-destination:nth-child(4) .etis-sk-destination-icon { background: linear-gradient(135deg, #5c2aa5, #7b3fc8); }
+
+.etis-sk-destination h2 {
+  color: #fff;
+  font-size: 1.18rem;
+  line-height: 1.15;
+  margin: 0 0 .55rem;
+  border: none;
+  padding: 0;
+}
+
+.etis-sk-destination p {
+  color: rgba(234,242,255,.88);
+  line-height: 1.44;
+  margin: 0 0 1rem;
+}
+
+.etis-sk-destination span {
+  color: #fff;
+  font-weight: 850;
+}
+
+/* Stats */
+.etis-sk-stats {
+  padding-top: .35rem;
+  padding-bottom: 1.65rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.05rem;
+}
+
+.etis-sk-stats div {
+  background: rgba(255,255,255,.94);
+  color: var(--etis-ink);
+  border-radius: .7rem;
+  padding: 1.05rem 1rem;
+  text-align: center;
+  box-shadow: 0 14px 24px rgba(0,0,0,.12);
+}
+
+.etis-sk-stats strong {
+  display: block;
+  color: var(--etis-blue);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.etis-sk-stats span {
+  display: block;
+  color: var(--etis-muted);
+  font-weight: 750;
+  margin-top: .3rem;
+}
+
+/* Principles */
+.etis-sk-principles {
+  padding-top: .45rem;
+  padding-bottom: 1.8rem;
+}
+
+.etis-sk-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  justify-content: center;
+}
+
+.etis-sk-chip-row span {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.24);
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.045));
+  border-radius: 999px;
+  padding: .65rem .95rem;
+  font-weight: 750;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.etis-sk-chip-row span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(242,191,88,.62);
+  background: rgba(255,255,255,.14);
+}
+
+/* Relationship */
+.etis-sk-relation-section {
+  padding-top: .5rem;
+  padding-bottom: 1.85rem;
+}
+
+.etis-sk-relation-flow {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+  gap: .7rem;
+  align-items: center;
+}
+
+.etis-sk-relation-flow a,
+.etis-sk-relation-flow div:not(.etis-sk-flow-arrow) {
+  min-height: 130px;
+  background: rgba(255,255,255,.94);
+  color: var(--etis-ink) !important;
+  border-radius: .7rem;
+  border: 1px solid rgba(216,224,238,.92);
+  padding: 1.1rem 1rem;
+  text-decoration: none !important;
+  box-shadow: 0 14px 24px rgba(0,0,0,.12);
+  transition: transform .16s ease, border-color .16s ease;
+}
+
+.etis-sk-relation-flow a:hover {
+  transform: translateY(-2px);
+  border-color: var(--etis-blue);
+}
+
+.etis-sk-relation-flow span {
+  color: var(--etis-blue);
+  font-weight: 900;
+  font-size: .82rem;
+}
+
+.etis-sk-relation-flow strong {
+  display: block;
+  color: var(--etis-navy);
+  margin: .25rem 0;
+  font-size: 1.05rem;
+}
+
+.etis-sk-relation-flow small {
+  color: var(--etis-muted);
+  line-height: 1.35;
+}
+
+.etis-sk-flow-arrow {
+  color: var(--etis-gold);
+  font-size: 1.65rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Structure */
+.etis-sk-structure-section {
+  padding-top: .45rem;
+  padding-bottom: 1.8rem;
+  display: grid;
+  grid-template-columns: 1.25fr .95fr;
+  gap: 1.25rem;
+}
+
+.etis-sk-structure-card,
+.etis-sk-who-card {
+  background: rgba(255,255,255,.96);
+  color: var(--etis-ink);
+  border-radius: .8rem;
+  border: 1px solid rgba(216,224,238,.92);
+  padding: 1.35rem 1.45rem;
+  box-shadow: 0 16px 28px rgba(0,0,0,.14);
+}
+
+.etis-sk-structure-card {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px,.8fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.etis-sk-structure-card .etis-sk-eyebrow,
+.etis-sk-who-card .etis-sk-eyebrow {
+  color: var(--etis-blue);
+}
+
+.etis-sk-structure-card h2 {
+  color: var(--etis-navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  margin: 0 0 .6rem;
+}
+
+.etis-sk-structure-card p {
+  color: var(--etis-muted);
+}
+
+.etis-sk-structure-card pre {
+  margin: 0;
+  background: #07152c;
+  border-radius: .55rem;
+  color: #eaf2ff;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.etis-sk-who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+.etis-sk-who-grid div {
+  border-left: 4px solid var(--etis-blue);
+  background: var(--etis-soft);
+  border-radius: .35rem;
+  padding: .8rem .85rem;
+}
+
+.etis-sk-who-grid strong {
+  display: block;
+  color: var(--etis-navy);
+}
+
+.etis-sk-who-grid span {
+  display: block;
+  color: var(--etis-muted);
+  font-size: .78rem;
+  line-height: 1.35;
+  margin-top: .15rem;
+}
+
+/* Final CTA */
+.etis-sk-final-cta {
+  padding-top: 1.1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.etis-sk-final-cta h2 {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 0 0 .45rem;
+  border: none;
+  padding: 0;
+}
+
+.etis-sk-final-cta p {
+  color: rgba(234,242,255,.86);
+  margin-bottom: 1.25rem;
+}
+
+.etis-sk-final-cta div {
+  display: flex;
+  justify-content: center;
+  gap: .85rem;
+  flex-wrap: wrap;
+}
+
+.etis-sk-cta-primary,
+.etis-sk-cta-secondary {
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: .48rem;
+  padding: .85rem 1.15rem;
+  font-weight: 850;
+}
+
+.etis-sk-cta-primary {
+  background: linear-gradient(135deg, #0f5ed7, #1f7aff);
+  border: 1px solid #74afff;
+}
+
+.etis-sk-cta-secondary {
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.055));
+  border: 1px solid rgba(255,255,255,.34);
+}
+
+/* Footer cleanup */
+body:has(.etis-sk-page) .md-footer__inner {
+  display: none !important;
+}
+
+body:has(.etis-sk-page) .md-footer-meta {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1500px) {
+  .etis-sk-hero-inner {
+    grid-template-columns: minmax(360px, 530px) minmax(700px, 1fr);
+    max-width: 1480px;
+    gap: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .etis-sk-hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .etis-sk-path-row {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .etis-sk-structure-section,
+  .etis-sk-structure-card {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-sk-lifecycle,
+  .etis-sk-destination-grid,
+  .etis-sk-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .etis-sk-relation-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-sk-flow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .etis-sk-path-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .etis-sk-hero-inner,
+  .etis-sk-lifecycle-section,
+  .etis-sk-destination-grid,
+  .etis-sk-stats,
+  .etis-sk-principles,
+  .etis-sk-relation-section,
+  .etis-sk-structure-section,
+  .etis-sk-final-cta {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .etis-sk-identity-card {
+    min-height: auto;
+    padding: 1.55rem 1.15rem;
+  }
+
+  .etis-sk-path-row,
+  .etis-sk-lifecycle,
+  .etis-sk-destination-grid,
+  .etis-sk-stats,
+  .etis-sk-who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-sk-destination {
+    min-height: auto;
+  }
+
+  .etis-sk-wordmark {
+    letter-spacing: .08em;
+  }
+
+  .etis-sk-path-row strong,
+  .etis-sk-path-row small {
+    white-space: normal;
+  }
+}
+
+/* ============================================================
+   ETIS Starter Kit Product Experience Pages
+   Applies to Platform, Engineering, Template Library, and Examples
+   ============================================================ */
+
+.etis-product-page {
+  --card-bg: #ffffff;
+  --card-border: #d8e0ee;
+  --card-text: #07152c;
+  --card-muted: #526179;
+}
+
+.etis-product-hero {
+  padding: 2.35rem 2.2rem;
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 84% 14%, rgba(31,122,255,.20), transparent 28%),
+    radial-gradient(circle at 18% 95%, rgba(242,191,88,.12), transparent 28%),
+    linear-gradient(135deg, #06142d 0%, #0b2b57 72%, #09224a 100%);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 18px 34px rgba(7,21,44,.16);
+  margin: 1rem 0 1.6rem;
+}
+
+.etis-product-eyebrow {
+  color: #f2bf58;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-weight: 900;
+  font-size: .72rem;
+  margin: 0 0 .55rem !important;
+}
+
+.etis-product-hero h1 {
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.08;
+  border: none !important;
+  margin: 0 0 .75rem !important;
+  padding: 0 !important;
+}
+
+.etis-product-hero p {
+  color: rgba(234,242,255,.92);
+  max-width: 900px;
+  font-size: 1.02rem;
+}
+
+.etis-product-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.etis-product-button {
+  color: #fff !important;
+  text-decoration: none !important;
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: .48rem;
+  padding: .75rem 1rem;
+  font-weight: 850;
+  background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+}
+
+.etis-product-button.primary {
+  background: linear-gradient(135deg, #0f5ed7, #1f7aff);
+  border-color: #74afff;
+}
+
+.etis-product-button:hover {
+  border-color: rgba(242,191,88,.70);
+  transform: translateY(-1px);
+}
+
+.etis-card-grid-2,
+.etis-card-grid-3,
+.etis-card-grid-4 {
+  display: grid;
+  gap: 1rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.etis-card-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.etis-card-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.etis-card-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.etis-product-card,
+.etis-product-link-card {
+  border: 1px solid var(--card-border);
+  border-radius: .75rem;
+  background: var(--card-bg);
+  padding: 1.05rem 1.1rem;
+  box-shadow: 0 10px 22px rgba(7,21,44,.06);
+}
+
+.etis-product-card h3,
+.etis-product-link-card h3 {
+  color: #06142d;
+  margin-top: 0;
+}
+
+.etis-product-card p,
+.etis-product-link-card p {
+  color: var(--card-muted);
+  margin-bottom: 0;
+}
+
+.etis-product-link-card {
+  display: block;
+  color: var(--card-text) !important;
+  text-decoration: none !important;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.etis-product-link-card:hover {
+  transform: translateY(-2px);
+  border-color: #0f5ed7;
+  box-shadow: 0 16px 28px rgba(7,21,44,.12);
+}
+
+.etis-product-link-card span {
+  display: inline-block;
+  color: #0f5ed7;
+  font-weight: 900;
+  font-size: .78rem;
+  margin-bottom: .35rem;
+}
+
+.etis-flow-panel {
+  background: #07152c;
+  color: #eaf2ff;
+  border-radius: .75rem;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0 1.4rem;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.etis-flow-panel pre {
+  margin: 0 !important;
+  background: transparent !important;
+  color: #eaf2ff !important;
+}
+
+.etis-callout {
+  margin: 1.2rem 0;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid #0f5ed7;
+  background: #f6f8fc;
+  border-radius: .35rem;
+}
+
+.etis-product-cta {
+  margin: 1.7rem 0 1rem;
+  padding: 1.5rem 1.4rem;
+  border-radius: .85rem;
+  background: linear-gradient(135deg, #06142d 0%, #0b2b57 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.etis-product-cta h2 {
+  color: #fff !important;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: 0;
+}
+
+.etis-product-cta p {
+  color: rgba(234,242,255,.88);
+}
+
+.etis-product-cta a {
+  display: inline-block;
+  margin-top: .4rem;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #0f5ed7, #1f7aff);
+  border: 1px solid #74afff;
+  border-radius: .48rem;
+  padding: .75rem 1rem;
+  font-weight: 850;
+}
+
+.etis-phase-ribbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .85rem;
+  margin: 1.25rem 0 1.6rem;
+}
+
+.etis-phase-ribbon a {
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: .7rem;
+  padding: 1rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(7,21,44,.12);
+}
+
+.etis-phase-ribbon a:nth-child(1) { background: linear-gradient(135deg,#0b2b57,#174273); }
+.etis-phase-ribbon a:nth-child(2) { background: linear-gradient(135deg,#8a6722,#d49b35); }
+.etis-phase-ribbon a:nth-child(3) { background: linear-gradient(135deg,#087940,#10a85a); }
+.etis-phase-ribbon a:nth-child(4) { background: linear-gradient(135deg,#4e238a,#7b3fc8); }
+
+.etis-phase-ribbon strong {
+  font-size: 1.15rem;
+}
+
+.etis-phase-ribbon small {
+  color: rgba(255,255,255,.86);
+  margin-top: .35rem;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 1100px) {
+  .etis-card-grid-4,
+  .etis-card-grid-3,
+  .etis-phase-ribbon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .etis-card-grid-2,
+  .etis-card-grid-3,
+  .etis-card-grid-4,
+  .etis-phase-ribbon {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ETIS Starter Kit Final UI Polish
+   Purpose:
+   - Improve home page visual hierarchy without changing layout.
+   - Preserve existing component behavior.
+   - Keep changes scoped to the Starter Kit landing experience.
+   ============================================================ */
+
+/* Make the hero kicker more visible without changing the hero structure. */
+.etis-sk-kicker {
+  font-size: .86rem;
+  letter-spacing: .24em;
+  line-height: 1.2;
+}
+
+/* Destination card titles need stronger contrast against the dark blue cards. */
+.etis-sk-destination h2 {
+  color: var(--etis-gold) !important;
+  text-shadow: 0 1px 14px rgba(0,0,0,.22);
+}
+
+/* Keep the destination card action links readable and intentional. */
+.etis-sk-destination span {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* Slightly tighten the icon-to-title rhythm on destination cards. */
+.etis-sk-destination-icon {
+  margin-bottom: .72rem;
+}
+
+/* Dark-section headings must stand out against the blue background. */
+.etis-sk-lifecycle-section .etis-sk-section-heading h2,
+.etis-sk-principles .etis-sk-section-heading h2,
+.etis-sk-relation-section .etis-sk-section-heading h2,
+.etis-sk-final-cta h2 {
+  color: #f7f2e8 !important;
+  text-shadow: 0 3px 22px rgba(0,0,0,.30);
+}
+
+/* Make the statistics row feel more like product proof points. */
+.etis-sk-stats strong {
+  font-size: 2.55rem;
+  line-height: .95;
+}
+
+/* Preserve dark headings inside white cards. */
+.etis-sk-structure-card h2,
+.etis-sk-who-card h2 {
+  color: var(--etis-navy) !important;
+  text-shadow: none;
+}
+
+/* Improve repository tree readability in the structure card. */
+.etis-sk-structure-card {
+  grid-template-columns: minmax(260px, .85fr) minmax(420px, 1.15fr);
+}
+
+.etis-sk-structure-card pre {
+  max-width: 100%;
+  min-width: 0;
+  font-size: .70rem;
+  line-height: 1.34;
+}
+
+/* Slightly improve focus visibility for keyboard users. */
+.etis-sk-page a:focus-visible {
+  outline: 3px solid rgba(242,191,88,.90);
+  outline-offset: 3px;
+  border-radius: .45rem;
+}
+
+/* Keep the relationship flow cards crisp and readable. */
+.etis-sk-relation-flow strong {
+  color: var(--etis-navy) !important;
+}
+
+.etis-sk-relation-flow small code {
+  color: var(--etis-navy);
+  font-weight: 850;
+}
+
+/* Mobile guardrails for the widened structure card. */
+@media screen and (max-width: 1200px) {
+  .etis-sk-structure-card {
+    grid-template-columns: 1fr;
+  }
+
+  .etis-sk-structure-card pre {
+    font-size: .76rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .etis-sk-kicker {
+    font-size: .78rem;
+  }
+
+  .etis-sk-stats strong {
+    font-size: 2.35rem;
+  }
+
+  .etis-sk-structure-card pre {
+    font-size: .68rem;
+  }
+}
+
