@@ -55,6 +55,24 @@ It turns the principles of trustworthy intelligent systems into a practical engi
 
 ---
 
+## Complementary Engineering Tools
+
+The Engineering Platform provides the engineering process, reusable templates, examples, and evidence structures used to build trustworthy intelligent systems.
+
+Complementary engineering tools can further assist both students and instructors by analyzing repository evidence throughout the engineering lifecycle.
+
+### Student Repository Preflight
+
+The Student Submission Preflight Toolkit analyzes a project's repository before phase-gate submission. It evaluates repository organization, engineering artifacts, evidence completeness, assignment expectations, and overall submission readiness, helping teams identify issues before instructor review.
+
+### Instructor Engineering Workbench
+
+The Instructor Engineering Workbench provides a structured environment for reviewing repository-centered engineering evidence across assignments and engineering cycles. It supports artifact analysis, repository lineage, engineering maturity assessment, rubric alignment, traceability, team activity review, and AI-assisted repository analysis to support consistent phase-gate evaluation.
+
+These tools complement the Engineering Platform while preserving engineering judgment, instructor oversight, and team accountability.
+
+---
+
 ## Engineering philosophy
 
 The Engineering Platform is built on a small set of working commitments.

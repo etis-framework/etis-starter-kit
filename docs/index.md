@@ -111,8 +111,7 @@ hide:
       </p>
 
       <p class="etis-sk-intro">
-        The Starter Kit helps teams organize work, make accountable decisions, preserve evidence,
-        use AI responsibly, and move from prototype thinking to operational trust.
+        The Starter Kit helps teams organize work, make accountable decisions, preserve evidence, use AI responsibly, and move from prototype thinking to operational trust. It also serves as the engineering foundation for complementary repository analysis and phase-gate review tools used in educational and instructional settings.
       </p>
 
       <div class="etis-sk-path-row" aria-label="Choose your path">
