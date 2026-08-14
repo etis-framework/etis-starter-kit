@@ -1,28 +1,128 @@
 name: Link or navigation issue
-description: Report broken links, confusing navigation, or MkDocs strict-build link warnings.
+description: Report broken links, incorrect destinations, confusing navigation, or MkDocs link-validation problems in the ETIS Engineering Platform.
 title: "[Navigation]: "
 labels: ["navigation", "documentation"]
+
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve navigation and link integrity in the ETIS Engineering Platform.
+
+        Use this form for broken links, incorrect destinations, missing navigation entries, confusing navigation paths, redirects, or MkDocs strict-build/link-validation problems.
+
+        For broader content or wording problems, use the **Documentation issue** form.
+
+        **Do not report security vulnerabilities through this public issue form.**
+        Follow the private reporting process described in `SECURITY.md`.
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type of issue
+      description: Select the category that best describes the problem.
+      options:
+        - Broken internal link
+        - Broken external link
+        - Incorrect link destination
+        - Missing navigation entry
+        - Confusing navigation path
+        - Incorrect or unexpected redirect
+        - MkDocs strict-build warning
+        - Link-validation failure
+        - Navigation label or hierarchy problem
+        - Other
+    validations:
+      required: true
+
   - type: textarea
     id: location
     attributes:
-      label: Affected page or file
-      description: Where is the broken link or navigation issue?
+      label: Affected page, file, or navigation location
+      description: Identify where the problem appears.
+      placeholder: |
+        Examples:
+        docs/platform/README.md
+        docs/engineering/ES-105/...
+        mkdocs.yml
+        https://platform.etisframework.org/...
+        Navigation: Engineering Platform > ES-105
     validations:
       required: true
 
   - type: textarea
     id: broken
     attributes:
-      label: What is broken?
-      description: Include the link text, href, URL, or mkdocs warning.
+      label: What is broken or confusing?
+      description: Describe the link or navigation problem. Include the link text, href, URL, navigation label, or relevant MkDocs warning when available.
+      placeholder: |
+        Example:
+        Link text: Engineering Platform Starter Kit
+        Current destination: https://...
+        Observed result: 404 / wrong page / redirect / missing navigation item
+
+        Or paste the relevant portion of the MkDocs warning.
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected destination
-      description: Where should the link go?
+      label: Expected destination or behavior
+      description: Describe where the link should go or how the navigation should behave.
+      placeholder: Provide the expected URL, page, section, navigation location, or behavior.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: observed_in
+    attributes:
+      label: Where did you observe the issue?
+      description: Select the environment where the problem appears.
+      options:
+        - Published Engineering Platform
+        - Current main branch
+        - Local MkDocs build
+        - GitHub Actions / CI
+        - Tagged release
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Provide relevant error output, screenshots, link-check results, or other evidence. Redact sensitive information.
+      placeholder: |
+        Examples:
+        - relevant `mkdocs build --clean --strict` output;
+        - link-check failure;
+        - browser error;
+        - screenshot;
+        - redirect destination.
     validations:
       required: false
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related links or navigation
+      description: Identify any related links, pages, navigation entries, or cross-references that may need to be updated with this fix.
+      placeholder: List related pages or links if known.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I searched existing issues and did not find an existing report that adequately covers this problem.
+          required: true
+        - label: I verified the problem using the current published Platform or current repository state when reasonably possible.
+          required: true
+        - label: I have not included credentials, secrets, private repository content, student information, customer information, or other sensitive data.
+          required: true
+        - label: This issue does not publicly disclose a known or suspected security vulnerability.
+          required: true
