@@ -6,6 +6,10 @@ This repository is the source for the ETIS Engineering Platform, the professiona
 
 ## [Unreleased]
 
+No unreleased changes are currently documented.
+
+## [1.1.0] - 2026-08-14
+
 ### Changed
 
 - Aligned the repository README with the current ETIS Framework and Engineering Platform architecture.
@@ -18,11 +22,28 @@ This repository is the source for the ETIS Engineering Platform, the professiona
 - Restored the canonical MIT License text.
 - Expanded repository notices, attribution guidance, reference-example boundaries, and engineering responsibility language.
 - Updated citation metadata and corrected the `CITATION.cff` structure.
+- Strengthened the pull request template to capture engineering rationale, architecture and governance impact, evidence, validation, security considerations, AI assistance, risks, and reviewer guidance.
+- Improved GitHub issue routing and disabled unstructured blank issues.
+- Expanded bug reporting to capture affected Platform areas, expected behavior, environment, reproduction steps, evidence, impact, and security safeguards.
+- Expanded engineering-improvement proposals to capture the engineering problem, rationale, expected outcome, architecture and governance impact, alternatives, evidence, and ETIS engineering boundaries.
+- Improved documentation issue reporting to distinguish documentation defects from substantive changes to ETIS engineering semantics or Platform architecture.
+- Improved link and navigation issue reporting for broken links, incorrect destinations, redirects, MkDocs validation failures, and navigation problems.
 
 ### Security
 
-- Established GitHub Private Vulnerability Reporting as the preferred vulnerability-disclosure mechanism.
+- Enabled GitHub Private Vulnerability Reporting as the preferred vulnerability-disclosure mechanism.
 - Added explicit security review expectations for reusable guidance, templates, workflows, dependencies, reference examples, and publication infrastructure.
+- Added security and sensitive-information safeguards throughout public issue and contribution workflows.
+- Clarified that suspected security vulnerabilities must not be disclosed through public Issues, pull requests, or Discussions.
+
+### Governance
+
+- Reinforced accountable human engineering judgment as authoritative.
+- Clarified that templates provide structure but do not constitute engineering evidence merely because they exist.
+- Clarified that completed reference examples illustrate engineering approaches but do not constitute evidence for another project.
+- Clarified that Project Workspace patterns are reusable patterns rather than mandatory project infrastructure.
+- Clarified that project-specific evidence belongs in the repository or engineering environment designated as the authoritative project record.
+- Preserved the boundary between the general Engineering Platform and course-specific requirements or repositories.
 
 ## [1.0.0] - 2026-07-09
 
@@ -61,5 +82,6 @@ This repository is the source for the ETIS Engineering Platform, the professiona
 - Engineering Stage readiness model.
 - Governance-by-design practices.
 
-[Unreleased]: https://github.com/etis-framework/etis-starter-kit/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/etis-framework/etis-starter-kit/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/etis-framework/etis-starter-kit/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/etis-framework/etis-starter-kit/releases/tag/v1.0.0
