@@ -1,5 +1,18 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
+
 contact_links:
+  - name: ETIS Engineering Platform
+    url: https://platform.etisframework.org
+    about: Read the published Engineering Platform, Engineering Stages, templates, reference examples, governance guidance, and Project Workspace patterns.
+
+  - name: ETIS Community Discussions
+    url: https://github.com/orgs/etis-framework/discussions
+    about: Ask general ETIS questions, discuss engineering practice, and participate in broader community conversations.
+
+  - name: Security Vulnerability Reporting
+    url: https://github.com/etis-framework/etis-starter-kit/security/policy
+    about: Do not report security vulnerabilities in a public issue. Follow the repository security policy and private reporting process.
+
   - name: ETIS Framework
     url: https://etisframework.org
-    about: Visit the public ETIS Framework site.
+    about: Visit the ETIS Framework site for the Framework Reference Work, publications, books, education, downloads, and ecosystem resources.
