@@ -1,27 +1,137 @@
 name: Documentation issue
-description: Report confusing, incomplete, inconsistent, or outdated documentation.
+description: Report confusing, incomplete, inconsistent, incorrect, or outdated ETIS Engineering Platform documentation.
 title: "[Docs]: "
 labels: ["documentation"]
+
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the ETIS Engineering Platform documentation.
+
+        Use this form for documentation problems such as unclear wording, missing context, outdated information, inconsistent terminology, incorrect cross-references, or content that is difficult to understand or locate.
+
+        If you are proposing a substantive change to Engineering Stage semantics, governance, templates, reference examples, Project Workspace patterns, or Platform architecture, use the **Engineering improvement** issue form instead.
+
+        **Do not report security vulnerabilities through this public issue form.**
+        Follow the private reporting process described in `SECURITY.md`.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Documentation area
+      description: Select the area most directly affected.
+      options:
+        - Platform overview / onboarding
+        - Engineering Stages ES-100 through ES-114
+        - Template Library
+        - Reference examples
+        - Project Workspace patterns
+        - Governance / evidence guidance
+        - Repository documentation
+        - Navigation / cross-references
+        - Build / contributor documentation
+        - Other
+    validations:
+      required: true
+
   - type: textarea
     id: page
     attributes:
-      label: Page or file
-      description: Identify the affected page or file.
+      label: Page, file, or location
+      description: Identify the affected page, file path, URL, Engineering Stage, heading, or section.
+      placeholder: |
+        Examples:
+        docs/platform/README.md
+        docs/engineering/ES-105/...
+        docs/template-library/...
+        docs/examples/lmu-coicp/...
+        https://platform.etisframework.org/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type of documentation issue
+      description: Select the description that best matches the problem.
+      options:
+        - Unclear or confusing
+        - Incorrect
+        - Incomplete or missing context
+        - Outdated
+        - Inconsistent terminology
+        - Duplicate or conflicting guidance
+        - Broken or misleading example
+        - Difficult to find or navigate to
+        - Formatting or presentation problem
+        - Other
     validations:
       required: true
 
   - type: textarea
     id: issue
     attributes:
-      label: Documentation issue
-      description: What should be clarified, corrected, or improved?
+      label: What is the documentation problem?
+      description: Describe what is unclear, incorrect, missing, inconsistent, outdated, or difficult to use.
+      placeholder: Explain the problem from the reader's perspective and why it may cause confusion or incorrect understanding.
     validations:
       required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should the reader understand?
+      description: Describe the intended meaning, information, or outcome that the documentation should communicate.
+      placeholder: What should a reader know or be able to determine after reading this material?
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_content
+    attributes:
+      label: Related documentation or cross-references
+      description: Identify other pages, files, links, or sections that may need to remain consistent with this change.
+      placeholder: |
+        Examples:
+        related Engineering Stage
+        Template Library page
+        reference example
+        Project Workspace pattern
+        README section
+        navigation entry
+        related external link
+    validations:
+      required: false
 
   - type: textarea
     id: suggestion
     attributes:
       label: Suggested improvement
+      description: If you have a proposed clarification or correction, describe it here.
+      placeholder: Suggested wording, structure, cross-reference, explanation, or other improvement.
     validations:
       required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Provide screenshots, conflicting text, affected links, references, or other information that helps explain the issue.
+      placeholder: Do not include credentials, private data, student information, or other sensitive information.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I searched existing issues and did not find an existing report that adequately covers this documentation problem.
+          required: true
+        - label: I have not included credentials, secrets, private repository content, student information, customer information, or other sensitive data.
+          required: true
+        - label: This issue does not publicly disclose a known or suspected security vulnerability.
+          required: true
+        - label: I understand that substantive changes to ETIS engineering semantics or Platform architecture should use the Engineering improvement issue form.
+          required: true
