@@ -1,23 +1,85 @@
 name: Bug report
-description: Report something broken in the Starter Kit.
+description: Report a defect in the ETIS Engineering Platform, documentation, build, navigation, or repository automation.
 title: "[Bug]: "
 labels: ["bug"]
+
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the ETIS Engineering Platform.
+
+        Use this form for reproducible defects in Platform content, documentation, navigation, reference examples, Project Workspace patterns, build behavior, or repository automation.
+
+        **Do not report security vulnerabilities through this public issue form.**
+        Follow the private reporting process described in `SECURITY.md`.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      description: Select the area most directly affected by the problem.
+      options:
+        - Platform overview / onboarding
+        - Engineering Stages ES-100 through ES-114
+        - Template Library
+        - Reference examples
+        - Project Workspace patterns
+        - Governance / evidence guidance
+        - Navigation / MkDocs configuration
+        - CSS / visual design
+        - Repository documentation
+        - GitHub Actions / automation
+        - Build / dependency configuration
+        - Other
+    validations:
+      required: true
+
   - type: textarea
     id: problem
     attributes:
       label: What is wrong?
-      description: Describe the problem clearly.
-      placeholder: What broke? What did you expect?
+      description: Describe the observed problem clearly.
+      placeholder: Describe what is broken, incorrect, inconsistent, missing, or behaving unexpectedly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Describe the expected content, behavior, result, or engineering meaning.
+      placeholder: Explain what you expected to see or what should have happened instead.
     validations:
       required: true
 
   - type: textarea
     id: location
     attributes:
-      label: Where is it?
-      description: Provide the page, file path, URL, or section.
-      placeholder: docs/platform/README.md, docs/examples/lmu-coicp/vision/problem_statement.md, etc.
+      label: Where is the problem?
+      description: Provide the page, file path, URL, Engineering Stage, template, workflow, or section where the problem occurs.
+      placeholder: |
+        Examples:
+        docs/platform/README.md
+        docs/engineering/ES-105/...
+        docs/examples/lmu-coicp/...
+        .github/workflows/ci.yml
+        Published Platform page or section
+    validations:
+      required: true
+
+  - type: dropdown
+    id: context
+    attributes:
+      label: Where did you observe the problem?
+      description: Select the environment or repository state where you observed the issue.
+      options:
+        - Published Engineering Platform
+        - Current main branch
+        - Local repository build
+        - Tagged release
+        - GitHub Actions / repository automation
+        - Other
     validations:
       required: true
 
@@ -25,7 +87,28 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce
-      description: List the steps that reproduce the issue.
+      description: If applicable, list the steps that reproduce the problem.
+      placeholder: |
+        1. Open...
+        2. Navigate to...
+        3. Run...
+        4. Observe...
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide relevant environment details when the problem depends on tooling or local execution.
+      placeholder: |
+        Examples:
+        macOS / Windows / Linux
+        Python version
+        MkDocs version
+        Browser
+        GitHub Actions workflow
+        Release or commit
     validations:
       required: false
 
@@ -33,6 +116,31 @@ body:
     id: evidence
     attributes:
       label: Evidence
-      description: Paste logs, screenshots, or `mkdocs build --strict` output if relevant.
+      description: Provide logs, screenshots, build output, error messages, or other evidence that helps demonstrate the problem. Redact sensitive information.
+      placeholder: Paste relevant evidence here. For build issues, include the relevant portion of `mkdocs build --clean --strict` output when available.
     validations:
       required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Explain why the issue matters and what users, Platform areas, engineering guidance, or workflows may be affected.
+      placeholder: Describe the practical or engineering consequence of the defect.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Confirm the following before submitting.
+      options:
+        - label: I searched existing issues and did not find an existing report that adequately covers this problem.
+          required: true
+        - label: I have not included credentials, secrets, private repository content, student information, customer information, or other sensitive data.
+          required: true
+        - label: This report does not publicly disclose a known or suspected security vulnerability.
+          required: true
+        - label: I understand that project-specific implementation problems may not represent defects in the ETIS Engineering Platform itself.
+          required: true
