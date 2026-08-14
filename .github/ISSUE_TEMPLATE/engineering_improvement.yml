@@ -1,37 +1,181 @@
 name: Engineering improvement
-description: Suggest an improvement to templates, examples, lifecycle guidance, governance, or repository structure.
+description: Propose an improvement to the ETIS Engineering Platform, lifecycle guidance, templates, reference examples, governance, or repository architecture.
 title: "[Improvement]: "
 labels: ["enhancement", "engineering"]
+
 body:
-  - type: textarea
-    id: improvement
+  - type: markdown
     attributes:
-      label: Proposed improvement
-      description: Describe the improvement.
-    validations:
-      required: true
+      value: |
+        Thank you for helping improve the ETIS Engineering Platform.
+
+        Use this form to propose a substantive improvement to Platform guidance, Engineering Stages, templates, reference examples, Project Workspace patterns, governance, evidence practices, repository architecture, or supporting automation.
+
+        Proposals should explain the engineering problem or opportunity, not only the desired change.
+
+        **Do not report security vulnerabilities through this public issue form.**
+        Follow the private reporting process described in `SECURITY.md`.
 
   - type: dropdown
     id: area
     attributes:
-      label: Area
+      label: Affected area
+      description: Select the area most directly affected by the proposed improvement.
       options:
-        - Platform overview
-        - Engineering stages
+        - Platform overview / onboarding
+        - Engineering Stages ES-100 through ES-114
         - Template Library
-        - Examples
-        - Project Workspace
-        - Governance
-        - Visual design
-        - Repository automation
+        - Reference examples
+        - Project Workspace patterns
+        - Governance / evidence guidance
+        - Repository-centered engineering
+        - AI-assisted engineering guidance
+        - Navigation / MkDocs configuration
+        - CSS / visual design
+        - Repository documentation
+        - GitHub Actions / repository automation
+        - Build / dependency configuration
         - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Engineering problem or opportunity
+      description: Describe the problem, limitation, ambiguity, gap, or opportunity that motivates this proposal.
+      placeholder: |
+        What is difficult, incomplete, inconsistent, unclear, or missing today?
+        Who or what is affected?
+        Why does it matter?
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Proposed improvement
+      description: Describe the change you recommend.
+      placeholder: Explain what should change and how the improved Platform experience or engineering guidance would work.
     validations:
       required: true
 
   - type: textarea
     id: rationale
     attributes:
-      label: Rationale
-      description: Why does this improve ETIS?
+      label: Engineering rationale
+      description: Explain why this change would improve the ETIS Engineering Platform.
+      placeholder: |
+        Consider:
+        - engineering quality;
+        - lifecycle clarity;
+        - evidence quality;
+        - usability;
+        - governance;
+        - accountability;
+        - operational consequences; or
+        - reduction of ambiguity or unnecessary complexity.
     validations:
       required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: Expected outcome
+      description: Describe what would be better if this improvement were adopted.
+      placeholder: What should engineers, maintainers, instructors, students, or adopting organizations be able to understand or do more effectively?
+    validations:
+      required: true
+
+  - type: textarea
+    id: architecture
+    attributes:
+      label: ETIS architecture or governance impact
+      description: Identify any effect on established ETIS terminology, lifecycle semantics, evidence boundaries, governance, or Platform architecture.
+      placeholder: |
+        Consider whether this proposal affects:
+        - Engineering Stage sequencing or semantics;
+        - readiness gates;
+        - reusable templates;
+        - reference examples;
+        - Project Workspace patterns;
+        - project-specific evidence;
+        - AI-assisted engineering;
+        - governance or risk;
+        - human engineering judgment.
+
+        If there is no material impact, state "None identified."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and trade-offs
+      description: Describe any alternatives considered, trade-offs introduced, or reasons to prefer this approach.
+      placeholder: What other approaches could solve the problem? What would this proposal make better or potentially more difficult?
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence or examples
+      description: Provide references, examples, screenshots, affected files, observed friction, or other evidence that supports the proposal.
+      placeholder: |
+        Examples:
+        - affected file or page paths;
+        - Platform URLs;
+        - repeated usability or navigation problems;
+        - inconsistent guidance;
+        - lifecycle or governance conflicts;
+        - supporting engineering references.
+
+        Do not include sensitive information.
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Likely scope of change
+      description: If known, identify the Platform areas or files likely to require modification.
+      placeholder: |
+        Examples:
+        docs/engineering/...
+        docs/template-library/...
+        docs/examples/...
+        docs/project-workspace/...
+        mkdocs.yml
+        .github/...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Engineering boundaries
+      description: Confirm the proposal respects the following ETIS boundaries.
+      options:
+        - label: The proposal does not treat a template or checklist as evidence merely because it exists.
+          required: true
+        - label: The proposal does not treat a reference example as project-specific evidence.
+          required: true
+        - label: The proposal does not make Project Workspace patterns mandatory for every implementation.
+          required: true
+        - label: The proposal preserves accountable human engineering judgment.
+          required: true
+        - label: The proposal does not introduce course-specific requirements into the general Engineering Platform.
+          required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I searched existing issues and did not find an existing proposal that adequately covers this improvement.
+          required: true
+        - label: I have not included credentials, secrets, private repository content, student information, customer information, or other sensitive data.
+          required: true
+        - label: This issue does not publicly disclose a known or suspected security vulnerability.
+          required: true
